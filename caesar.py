@@ -10,17 +10,17 @@ Xlmw irgvCtxih qiwweki wlepp gpevmjC lsA RSX xs irgvCtx e qiwweki xsheC! Izir mj
 #cipherText = re.sub('[^a-z]', '', cipherText.lower()) 
 
 #custom alphabet?
-#alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
-#alphabet = ''.join(alphabet)
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
+alphabet = ''.join(alphabet)
 
 #print str(alphabet)
 for i in range (-62,62):
 	plainText = []
 	print i,":",
 	for char in cipherText:
-#		if char in alphabet:
-#			index = (alphabet.find(char) + i) % 62
-#			plainText.append(alphabet[index])
+		if char in alphabet:
+			index = (alphabet.find(char) + i) % 62
+			plainText.append(alphabet[index])
 		elif char in ascii_lowercase:
 			index = (ascii_lowercase.find(char) + i) % 26
 			plainText.append(ascii_lowercase[index])
